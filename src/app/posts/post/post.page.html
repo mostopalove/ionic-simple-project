@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/posts">
+        Back
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{post.title}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDelete()">
+        <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="post.image"></ion-img>
+  <ion-item>
+    {{post.description}}
+  </ion-item>
+</ion-content>
